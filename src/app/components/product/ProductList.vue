@@ -55,6 +55,7 @@ export default {
 
 .product-list .item h4 {
   font-size: 20px;
+  text-transform : uppercase;
 }
 
 .product-list .item p {

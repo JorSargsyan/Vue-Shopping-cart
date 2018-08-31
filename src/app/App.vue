@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <div class="container">
+
+      <h2>Shopping Cart With VUE.JS</h2>
       <div class="row main-section">
       <div class="col-lg-4">
         <CartList/>
@@ -46,5 +48,23 @@ export default {
 
 p{
   margin-bottom: 0;
+}
+
+
+  .container {
+      max-width: 1400px;
+  }
+
+
+
+h2{
+    text-transform: uppercase;
+    padding-bottom: 54px;
+    letter-spacing: 2px;
+    color: gray;
+}
+
+*{
+  font-family: "Oswald",sans-serif;
 }
 </style>

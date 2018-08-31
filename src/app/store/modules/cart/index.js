@@ -1,6 +1,7 @@
 import Axios from "axios"
 
 
+
 const state = {
     cartItems : []
 };
@@ -20,7 +21,8 @@ const actions = {
     },
     addCartItem({commit},cartItem){
         Axios.post("/api/cart",cartItem).then((response) => {
-            commit("UPDATE_CART_ITEMS",response.data);
+            
+           commit("UPDATE_CART_ITEMS",response.data);
         })
     },
     removeCartItem({commit},cartItem){
@@ -41,7 +43,7 @@ const getters = {
     cartsTotal  : state => {
         return state.cartItems.reduce((acc,cartItem)=>{
             return(cartItem.quantity * cartItem.price) + acc;
-        },0);
+        },0).toFixed(2);
     },
     cartQuantity : state => {
         return state.cartItems.reduce((acc,cartItem)=>{
@@ -54,7 +56,7 @@ const CartModule = {
     state,
     actions,
     mutations,
-     getters
+    getters
 }
 
 

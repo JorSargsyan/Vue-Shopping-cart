@@ -9,7 +9,8 @@
            v-for="item in cartItems"
            :key = "item.id"
            >
-                <CartItem :CartItem = item></CartItem>
+                <CartItem  :CartItem = item></CartItem>
+         
            </div>
           
            <div class="cart-details" v-if="cartItems.length > 0">
@@ -19,7 +20,7 @@
                </button>
            </div>
        </ul>
-       <button class="btn btn-success">Checkout ( <span>${{cartsTotal}}</span> ) </button>
+       <button v-if="cartItems.length > 0" class="btn btn-success">Checkout ( <span>${{cartsTotal}}</span> ) </button>
    </div>
 </template>
 
@@ -54,6 +55,11 @@ export default {
 
 
 <style>
+
+
+.cart-details p{
+    font-size: 25px;
+}
 .cart-list{
    
     list-style-type: none;
@@ -67,6 +73,7 @@ export default {
 
 .cart-item .title{
     font-weight: 600;
+    font-size: 22px;
 }
 
 .cart-details p{
@@ -76,10 +83,11 @@ export default {
 .cart-item .quantity{
     font-weight: 600;
     color: gray;
+    font-size: 22px;
 }
 
 .cart-item .cart-item-modify{
-    font-size: 23px;
+    font-size: 31px;
     transition: 0.5s;
     cursor: pointer;
 }

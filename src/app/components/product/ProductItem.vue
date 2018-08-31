@@ -8,7 +8,7 @@
                 <p>{{item.description}}</p>
                  <span class="price"><i class="fa fa-usd"></i> {{item.price}}</span>
             </div>
-            <div class="col-lg-3">
+            <div  class="col-lg-3">
                 <button @click="addCartItem(item)" class="btn btn-success addCartButton">Add to cart</button>
             </div>
         </div>
@@ -29,4 +29,19 @@ export default {
     }
 }
 </script>
+
+
+<style>
+
+.product-list .item img{
+    max-height: 250px;
+}
+.product-list .item p{
+    font-size: 18px;
+}
+.product-list .item span.price{
+    font-size:18px;
+}
+</style>
+
 
