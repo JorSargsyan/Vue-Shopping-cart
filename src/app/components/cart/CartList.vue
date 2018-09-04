@@ -1,9 +1,5 @@
 <template>
-   <div id="cart">
-       <div class="cart-header">
-           <i class="fa fa-2x fa-shopping-cart"></i>
-           <hr>
-       </div>
+   <div id="cart" class=" col-lg-12">
        <ul class="cart-list">
            <div 
            v-for="item in cartItems"
@@ -12,112 +8,104 @@
                 <CartItem  :CartItem = item></CartItem>
          
            </div>
-          
-           <div class="cart-details" v-if="cartItems.length > 0">
-               <p>Total Quantity :<span>{{cartQuantity}}</span></p>
-               <button  @click="removeCartAllItems" class="btn btn-danger cart-remove-all">
+          <div class="container-fluid">
+           <div class="cart-details row" >
+               <div class="col-lg-6">
+                    <p>Total Quantity :<span>{{cartQuantity}}</span></p>
+               </div>
+                 <div class="col-lg-6">
+                    <button  @click="removeCartAllItems" class="btn btn-danger cart-remove-all">
                    <i class="fa fa-trash"></i>Remove All
-               </button>
+                    </button>
+               </div>
+                 <div class="col-lg-12">
+                    <button @click="checkOutCart" class="btn btn-success">Checkout ( <span>${{cartsTotal}}</span> ) </button>
+               </div>
+           </div>
            </div>
        </ul>
-       <button v-if="cartItems.length > 0" class="btn btn-success">Checkout ( <span>${{cartsTotal}}</span> ) </button>
+      
    </div>
 </template>
 
 
 <script>
-import {mapGetters,mapActions} from "vuex";
-import CartItem from "./CartItem"
+import { mapGetters, mapActions } from "vuex";
+import CartItem from "./CartItem";
 
 export default {
   name: "CartList",
-  created(){
-      this.$store.dispatch("getCartItems");
+  computed: {
+    ...mapGetters(["cartItems", "cartsTotal", "cartQuantity"])
   },
-  computed:{
-      ...mapGetters([
-          'cartItems',
-          'cartsTotal',
-          'cartQuantity'
-      ]),
+  methods: {
+    ...mapActions(["removeCartAllItems", "checkOutCart"])
   },
-  methods:{
-      ...mapActions([
-          'removeCartAllItems'
-      ])
-  }
-  ,
   components: {
-      CartItem
+    CartItem
   }
 };
 </script>
 
 
 <style>
-
-
-.cart-details p{
-    font-size: 25px;
-}
-.cart-list{
-   
-    list-style-type: none;
+.cart-details p {
+  font-size: 20px;
 }
 
-.cart-item{
-    background: white;
-    padding: 15px;
-    box-shadow: 0 0 7px 1px #0000003d;
+.cart-details>div{
+    padding-bottom: 10px;
 }
 
-.cart-item .title{
-    font-weight: 600;
-    font-size: 22px;
+.cart-list {
+  list-style-type: none;
 }
 
-.cart-details p{
-    font-weight: 600;
+.cart-item {
+  padding: 15px;
 }
 
-.cart-item .quantity{
-    font-weight: 600;
-    color: gray;
-    font-size: 22px;
+.cart-item .title {
+  font-weight: 600;
 }
 
-.cart-item .cart-item-modify{
-    font-size: 31px;
-    transition: 0.5s;
-    cursor: pointer;
+.cart-details p {
+  font-weight: 600;
 }
 
-.cart-item .cart-item-modify:hover{
-    color: #28a745;
+.cart-item .quantity {
+  font-weight: 600;
+  color: gray;
 }
 
-
-
-.cart-item .price{
-    color: #28a745;
-    font-weight: 600;
-    font-style: italic;
+.cart-item .cart-item-modify {
+  font-size: 31px;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
-.cart-details{
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 5px;
+.cart-item .cart-item-modify:hover {
+  color: #28a745;
 }
 
-
-
-.float-right{
-    float: right;
+.cart-item .price {
+  color: #28a745;
+  font-weight: 600;
+  font-style: italic;
 }
 
-ul{
-    padding: 5px 5px;
+.cart-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 5px;
+}
+
+.float-right {
+  float: right;
+}
+
+ul {
+  padding: 5px 5px;
 }
 </style>
 

@@ -3,35 +3,40 @@
             "id":1,
 			"imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/M63H24W7JF0-L302-ALTGHOST?wid=1500&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
             "title": "CHECK PRINT SHIRT",
-            "description" : "Desc1",
+			"description" : "Desc1",
+			"type": "shirt",
 			"price": 110
 		},
 		{
             "id":2,
 			"imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/FLGLO4FAL12-BEIBR?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
             "title": "GLORIA HIGH LOGO SNEAKER",
-            "description" : "Desc2",
+			"description" : "Desc2",
+			"type": "shoes",
 			"price": 91
 		},
 		{
             "id":3,
 			"imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/HWVG6216060-TAN?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
             "title": "CATE RIGID BAG",
-            "description" : "Desc3",
+			"description" : "Desc3",
+			"type": "bag",
 			"price": 94.5
 		},
 		{
             "id":4,
 			"imgUrl": "http://guesseu.scene7.com/is/image/GuessEU/WC0001FMSWC-G5?wid=520&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
             "title": "GUESS CONNECT WATCH",
-            "description" : "Desc4",
+			"description" : "Desc4",
+			"type": "watch",
 			"price": 438.9
 		},
 		{
             "id":5,
 			"imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/AW6308VIS03-SAP?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
             "title": "'70s RETRO GLAM KEFIAH",
-            "description" : "Desc5",
+			"description" : "Desc5",
+			"type": "kefiah",
 			"price": 20
 		},
 		{
@@ -39,6 +44,7 @@
 			"imgUrl":"https://i.ebayimg.com/images/g/JH8AAOSw~bZbKj4v/s-l300.jpg",
 			"title":"Burberry Brit",
 			"description":"desc6",
+			"type": "shirt",
 			"price":18
 		},
 		{
@@ -46,6 +52,7 @@
 			"imgUrl":"https://i.ebayimg.com/images/g/LZ8AAOSwIFtZ5fmA/s-l500.jpg",
 			"title":"Polo T-shirt",
 			"description":"desc7",
+			"type": "shirt",
 			"price":35
 		},
 		{
@@ -53,6 +60,7 @@
 			"imgUrl":"https://i.ebayimg.com/images/g/AVwAAOSwaZRbc6ri/s-l500.jpg",
 			"title":"Modern Coat",
 			"description": "desc8",
+			"type": "coat",
 			"price":59
 		},
 		{
@@ -60,6 +68,7 @@
 			"imgUrl":"https://i.ebayimg.com/images/g/PUkAAOSw~9BZtmiU/s-l500.jpg",
 			"title":" Jacket Fight Bomber",
 			"description": "desc9",
+			"type": "jacket",
 			"price":120
 		}
 ]

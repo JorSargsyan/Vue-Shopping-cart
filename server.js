@@ -82,4 +82,11 @@ app.post("/cart/removeall",function(req,res){
     })
    
 })
+
+
+app.post("/cart/checkout",function(req,res){
+    
+    res.send("Checkout DONE!!!");
+})
+
 app.listen(3000);

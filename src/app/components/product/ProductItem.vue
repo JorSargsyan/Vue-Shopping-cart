@@ -4,7 +4,12 @@
                 <img class="item-pic img-fluid" :src="item.imgUrl" alt="">
             </div>
             <div class="col-lg-6">
-                <h4>{{item.title}}</h4>
+                <h4>
+                    <router-link :to="'/products/' + item.id">
+                         {{item.title}}
+                    </router-link>
+                  
+                    </h4>
                 <p>{{item.description}}</p>
                  <span class="price"><i class="fa fa-usd"></i> {{item.price}}</span>
             </div>
@@ -32,6 +37,16 @@ export default {
 
 
 <style>
+
+a{
+    text-decoration: none!important;
+    color: inherit!important;
+    transition: 0.25s all;
+}
+
+a:hover{
+    color: red;
+}
 
 .product-list .item img{
     max-height: 250px;

@@ -29,9 +29,6 @@ export default {
   components: {
       ProductItem
   },
-  created() {
-    this.$store.dispatch("getProductItems");
-  },
   computed: {
     ...mapGetters(["productItems"])
   }
